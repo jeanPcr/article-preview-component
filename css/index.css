@@ -1,0 +1,158 @@
+:root {
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+}
+
+body {
+    background-color: var(--LightGrayishBlue);
+
+}
+
+.article {
+    font-family: 'Manrope', sans-serif;
+    width: 55%;
+    margin: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10em var(--GrayishBlue);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    -ms-transform: translate(0%, 50%);
+    transform: translate(0, 50%);
+    transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 900px) {
+
+
+
+    .article {
+        grid-template-columns: none;
+        grid-template-rows: repeat(2, 1fr);
+        width: 70%;
+        transform: none;
+    }
+
+
+
+
+
+}
+
+.art_img {
+    border-radius: 10px 0 0 10px;
+    background-image: url("../images/drawers.jpg");
+    background-position: left;
+    background-size: cover;
+    height: 100%;
+}
+
+.art_container {
+    font-size: 13px;
+    padding: 20px 50px;
+    text-align: left;
+}
+
+.art_title {
+    font-weight: 700;
+    color: var(--VeryDarkGrayishBlue);
+}
+
+.art_content {
+    font-weight: 500;
+    color: var(--DesaturatedDarkBlue);
+    margin-bottom: 5%;
+}
+
+/**AUTHOR**/
+.art_footer {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.art_author {
+    width: 50%;
+}
+
+.author_img {
+    width: 2.5em;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1em;
+}
+
+.author_name {
+    font-weight: 700;
+    color: var(--VeryDarkGrayishBlue);
+}
+
+.created_at {
+    color: var(--GrayishBlue);
+}
+
+/** Social Share**/
+
+
+
+.share {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    width: 50%;
+}
+
+
+.share_btn {
+    background-color: var(--LightGrayishBlue);
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+.share_btn img {
+    color: white;
+    fill: white;
+}
+
+.share_icons {
+    background-color: var(--VeryDarkGrayishBlue);
+    border-radius: 8px;
+    position: absolute;
+    bottom: 160%;
+    right: -55%;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 2em;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.bottomTriangle {
+    position: absolute;
+    bottom: 130%;
+    right: -2%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--VeryDarkGrayishBlue);
+}
+
+.share_icons P {
+    font-weight: lighter;
+    font-size: 10px;
+    color: var(--LightGrayishBlue);
+    margin-right: 2em;
+    letter-spacing: 0.5em;
+}
+
+.share_icons a {
+
+    margin-right: 1em;
+
+}
